@@ -1,25 +1,7 @@
 import React, { useState } from 'react';
-import { FlatList, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
-import Message from './src/components/Message';
-import Users from './src/components/Users';
-
-/*
-const App = () => {
-  return (
-    <Provider store={store}>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.container}>
-        <ScrollView contentContainerStyle={styles.container}>
-          <Message />
-          <Users />
-        </ScrollView>
-      </SafeAreaView>
-    </Provider>
-  );
-};
-*/
 
 const mergeStyles = (base: any, extension: any) => {
   const mergedStyles = { ...base };
@@ -96,10 +78,6 @@ const App = () => {
   return (
     <Provider store={store}>
       <StatusBar barStyle="dark-content" />
-      {/*
-      <SafeAreaView style={styles.container}>
-        <ScrollView contentContainerStyle={styles.container}>
-      */}
       <View
         style={styles.container}
       >
@@ -110,10 +88,6 @@ const App = () => {
           renderItem={renderItem}
         />
       </View>
-      {/*
-        </ScrollView>
-      </SafeAreaView>
-      */}
     </Provider>
   );
 };
