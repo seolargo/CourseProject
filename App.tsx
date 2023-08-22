@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlatList, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 
 const mergeStyles = (base: any, extension: any) => {
@@ -75,7 +75,7 @@ const App = () => {
   );
 
   return (
-    <>
+    <SafeAreaView style={{ flex: 1 }}>
       <StatusBar barStyle="dark-content" />
       <View
         style={styles.container}
@@ -87,7 +87,7 @@ const App = () => {
           renderItem={renderItem}
         />
       </View>
-    </>
+    </SafeAreaView>
   );
 };
 
