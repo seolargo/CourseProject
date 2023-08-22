@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FlatList, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
-import { store } from './src/store';
 
 const mergeStyles = (base: any, extension: any) => {
   const mergedStyles = { ...base };
@@ -76,7 +75,7 @@ const App = () => {
   );
 
   return (
-    <Provider store={store}>
+    <>
       <StatusBar barStyle="dark-content" />
       <View
         style={styles.container}
@@ -88,7 +87,7 @@ const App = () => {
           renderItem={renderItem}
         />
       </View>
-    </Provider>
+    </>
   );
 };
 
